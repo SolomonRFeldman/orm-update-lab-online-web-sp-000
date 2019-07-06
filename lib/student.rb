@@ -39,7 +39,6 @@ class Student
   
   def self.find_by_name(name)
     sql = "SELECT * FROM students WHERE students.name = ? LIMIT 1"
-    binding.pry
     Student.new_from_db(DB[:conn].execute(sql, name).first)
   end
   
