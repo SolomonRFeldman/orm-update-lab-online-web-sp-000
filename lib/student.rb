@@ -32,6 +32,8 @@ class Student
     Student.new(name, grade).save
   end
   
+  def self.new_from_db
+  
   def self.create_table
     sql = <<-SQL
       CREATE TABLE IF NOT EXISTS students (
